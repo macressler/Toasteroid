@@ -152,4 +152,12 @@ public class Toasteroid {
             toast = null;
         }
     }
+
+    public static boolean isShowing() {
+        if (toast != null && toast.isShowing()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
