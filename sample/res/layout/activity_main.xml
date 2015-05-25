@@ -1,0 +1,55 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/animated_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/style"
+            android:textAllCaps="true"
+            />
+        <Spinner
+            android:id="@+id/style_spnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/styles"
+            android:minHeight="48dp"
+            android:prompt="@string/style"
+            android:spinnerMode="dropdown"
+            />
+
+        <LinearLayout
+            android:id="@+id/alt_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:orientation="vertical"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="buttonClick"
+            android:text="@string/show_appmsg"/>
+
+        <Button
+            android:id="@+id/cancel_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="buttonClick"
+            android:text="@string/dismiss"/>
+
+    </LinearLayout>
+</ScrollView>

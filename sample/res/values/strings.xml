@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Toasteroid</string>
+    <string name="long_duration">Long duration</string>
+    <string name="different_gravity">Different gravity</string>
+    <string name="success">Success</string>
+    <string name="info">Info</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+    <string name="delete">Delete</string>
+    <string name="with_animation">With animation</string>
+    <string name="sticky">Sticky</string>
+    <string name="show_appmsg">Show Toasteroid!</string>
+    <string name="style">Style</string>
+    <string name="dismiss">Dismiss</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="success">#669900</color>
+    <color name="info">#ff0e6c99</color>
+    <color name="warning">#FF8800</color>
+    <color name="error">#CC0000</color>
+    <color name="deleted">#E56248</color>
+
+</resources>
