@@ -54,7 +54,7 @@ repositories {
 And then add the library in your specific project build.gradle:
 
 ``` xml
-    compile 'com.github.marcohc:toasteroid:1.0.6'
+    compile 'com.github.marcohc:toasteroid:<release>'
 ```
 
 Contribution
