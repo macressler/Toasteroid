@@ -9,7 +9,7 @@
 #.checkstyle
 
 # Files for the idea
-*.idea/
+*.idea/*
 
 # Files for the Dalvik VM
 *.dex
