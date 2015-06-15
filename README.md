@@ -39,7 +39,7 @@ Toasteroid.show(Activity activity, String message, STYLES style, long duration, 
 Gradle
 ------
 
-Toasteroid uses the awesome tool [Jitpack] (https://jitpack.io/)
+Toasteroid uses the awesome tool [Jitpack] (https://jitpack.io/#marcohc/toasteroid)
 
 Add the repository to your general build.gradle:
 
@@ -54,7 +54,7 @@ repositories {
 And then add the library in your specific project build.gradle:
 
 ``` xml
-    compile 'com.github.marcohc:toasteroid:<last_commit_hash_key>'
+    compile 'com.github.marcohc:toasteroid:<release>'
 ```
 
 Contribution

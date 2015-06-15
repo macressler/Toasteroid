@@ -43,7 +43,7 @@ public class AppMsg {
     public static final AppMsgStyle ERROR_APP_MSG_STYLE = new AppMsgStyle(LENGTH_SHORT, R.color.error);
     public static final AppMsgStyle DELETE_APP_MSG_STYLE = new AppMsgStyle(LENGTH_SHORT, R.color.deleted);
 
-    private final Activity mActivity;
+    private Activity mActivity;
     private int mDuration = LENGTH_SHORT;
     private View mView;
     private ViewGroup mParent;
@@ -188,6 +188,11 @@ public class AppMsg {
 
     public Activity getActivity() {
         return mActivity;
+    }
+
+    public void clear() {
+        mActivity = null;
+        System.gc();
     }
 
     public void setView(View view) {
