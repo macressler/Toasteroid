@@ -72,7 +72,6 @@ public class Toasteroid {
         notificationImage.setImageResource(getIconByStyle(style));
 
         if (toast != null) {
-            toast.clear();
             toast.cancel();
             toast = null;
         }

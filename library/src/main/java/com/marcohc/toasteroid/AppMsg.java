@@ -190,11 +190,6 @@ public class AppMsg {
         return mActivity;
     }
 
-    public void clear() {
-        mActivity = null;
-        System.gc();
-    }
-
     public void setView(View view) {
         mView = view;
     }
@@ -210,10 +205,6 @@ public class AppMsg {
     public int getDuration() {
         return mDuration;
     }
-
-//    public void setText(int resId) {
-//        setText(mActivity.getText(resId));
-//    }
 
     public void setText(String s) {
         if (mView == null) {

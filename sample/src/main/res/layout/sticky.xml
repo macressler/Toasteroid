@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp">
 
     <ImageButton
         android:id="@+id/remove_btn"
-        style="@style/SelectableItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:minHeight="48dp"
         android:minWidth="48dp"
-        android:src="@drawable/ic_action_cancel_inset"/>
+        android:src="@drawable/ic_action_cancel_inset" />
 
 
     <TextView
@@ -27,6 +26,6 @@
         android:textColor="#ff222222"
         android:textIsSelectable="false"
         android:textSize="14sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -19,7 +19,7 @@ package com.marcohc.toasteroid.sample;
 import android.animation.LayoutTransition;
 import android.annotation.TargetApi;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +39,7 @@ import static android.os.Build.VERSION_CODES.JELLY_BEAN;
  *
  * @author Marco Hernaiz Cao
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private Spinner mStyle;
 
