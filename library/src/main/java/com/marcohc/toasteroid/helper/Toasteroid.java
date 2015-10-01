@@ -71,10 +71,7 @@ public class Toasteroid {
         AppMsgStyle appMsgStyle = getAppMsgStyle(style);
         notificationImage.setImageResource(getIconByStyle(style));
 
-        if (toast != null) {
-            toast.cancel();
-            toast = null;
-        }
+        AppMsg.cancelAll();
 
         toast = AppMsg.makeText(activity, message, appMsgStyle, view, true);
 

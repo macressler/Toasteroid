@@ -175,7 +175,6 @@ public class AppMsg {
 
     public void cancel() {
         MsgManager.obtain(mActivity).clearMsg(this);
-
     }
 
     public static void cancelAll() {

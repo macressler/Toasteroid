@@ -54,8 +54,8 @@ class MsgManager extends Handler implements Comparator<AppMsg> {
     private final Queue<AppMsg> stickyQueue;
 
     private MsgManager() {
-        msgQueue = new PriorityQueue<AppMsg>(1, this);
-        stickyQueue = new LinkedList<AppMsg>();
+        msgQueue = new PriorityQueue<>(1, this);
+        stickyQueue = new LinkedList<>();
     }
 
     /**
