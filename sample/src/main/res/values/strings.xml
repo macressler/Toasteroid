@@ -13,5 +13,6 @@
     <string name="show_appmsg">Show Toasteroid!</string>
     <string name="style">Style</string>
     <string name="dismiss">Dismiss</string>
+    <string name="is_shown">Is shown</string>
 
 </resources>

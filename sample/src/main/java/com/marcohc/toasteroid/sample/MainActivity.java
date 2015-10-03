@@ -20,7 +20,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Spinner;
 
 import com.marcohc.toasteroid.Toasteroid;
@@ -39,13 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mStyle = (Spinner) findViewById(R.id.style_spnr);
-        Button mButton = (Button) findViewById(R.id.show);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonClick(v);
-            }
-        });
     }
 
     /**
@@ -55,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void buttonClick(View v) {
         switch (v.getId()) {
-            case R.id.show:
+            case R.id.showButton:
                 showAppMsg();
                 break;
-            case R.id.cancel_all:
+            case R.id.cancelButton:
                 Toasteroid.dismiss();
                 break;
             default:

@@ -4,10 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:alpha="0.8"
+    android:alpha="@dimen/toasteroid_alpha_background"
     android:background="@android:color/black"
-    android:elevation="@dimen/padding"
-    android:padding="@dimen/small_padding">
+    android:elevation="@dimen/toasteroid_elevation"
+    android:padding="@dimen/toasteroid_padding">
 
     <LinearLayout
         android:layout_width="match_parent"

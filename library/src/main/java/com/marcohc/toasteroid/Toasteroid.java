@@ -26,12 +26,7 @@ import android.widget.Toast;
 
 public class Toasteroid {
 
-    private static ImageView toastImage;
-    private static TextView toastMessage;
-    private static ViewGroup toastContainer;
     private static Toast myToast;
-    private static View toastView;
-    private static int marginBottom;
 
     public enum STYLES {
         SUCCESS, INFO, WARNING, ERROR, DELETE
@@ -51,13 +46,15 @@ public class Toasteroid {
 
     public static void show(Activity activity, String message, STYLES style, int duration, int gravity) {
 
-        toastView = getToastView(activity);
+        View toastView = activity.getLayoutInflater().inflate(R.layout.toasteroid_layout, null);
+        ImageView toastImage = (ImageView) toastView.findViewById(R.id.toastImage);
+        TextView toastMessage = (TextView) toastView.findViewById(R.id.toastMessage);
+        ViewGroup toastContainer = (ViewGroup) toastView.findViewById(R.id.toastContainer);
+        int marginBottom = (int) activity.getResources().getDimension(R.dimen.toasteroid_elevation);
         toastImage.setImageResource(getStyleIcon(style));
         toastContainer.setBackgroundResource(getStyleBackgroundColor(style));
         toastMessage.setText(message);
-
         myToast = new Toast(activity);
-
         myToast.setDuration(duration);
         myToast.setMargin(0, 0);
         myToast.setGravity(gravity, 0, marginBottom);
@@ -65,15 +62,19 @@ public class Toasteroid {
         myToast.show();
     }
 
-    private static View getToastView(Activity activity) {
-        if (toastView == null) {
-            toastView = activity.getLayoutInflater().inflate(R.layout.toasteroid_layout, null);
-            toastImage = (ImageView) toastView.findViewById(R.id.toastImage);
-            toastMessage = (TextView) toastView.findViewById(R.id.toastMessage);
-            toastContainer = (ViewGroup) toastView.findViewById(R.id.toastContainer);
-            marginBottom = (int) activity.getResources().getDimension(R.dimen.padding);
+    public static void dismiss() {
+        if (myToast != null) {
+            myToast.cancel();
+            myToast = null;
         }
-        return toastView;
+    }
+
+    public static boolean isShown() {
+        if (myToast != null && myToast.getView().isShown()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private static int getStyleIcon(STYLES style) {
@@ -123,17 +124,5 @@ public class Toasteroid {
                 break;
         }
         return color;
-    }
-
-    public static void dismiss() {
-        myToast.cancel();
-    }
-
-    public static boolean isShowing() {
-        if (toastView != null && toastView.getVisibility() == View.VISIBLE) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
