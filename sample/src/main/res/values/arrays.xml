@@ -8,6 +8,5 @@
         <item>@string/delete</item>
         <item>@string/long_duration</item>
         <item>@string/different_gravity</item>
-        <item>@string/with_animation</item>
     </string-array>
 </resources>

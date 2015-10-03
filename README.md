@@ -1,7 +1,7 @@
 Toasteroid Library
 ================================
 
-Out of the box library for displaying Android toasts with steroids, based on the cool library [Android-AppMsg](https://github.com/johnkil/Android-AppMsg)
+Out of the box library for displaying Android toasts with steroids
 
 Just one line and you'll have a nice an fancy Toast!
 
@@ -33,7 +33,7 @@ Toasteroid.show(Activity activity, String message, STYLES style);
 * to more complex:
 
 ``` java
-Toasteroid.show(Activity activity, String message, STYLES style, long duration, int gravity, Animation inAnimation, Animation outAnimation);
+Toasteroid.show(Activity activity, String message, STYLES style, long duration, int gravity);
 ```
 
 Gradle
@@ -71,11 +71,6 @@ Developed By
 
 * Marco Hernaiz Cao - <marco.hernaiz.cao@gmail.com>
 
-Credits
--------
-
- * [johnkil][4] - Author of [Android-Android-AppMsg][5] in which this library is based.
-
 
 License
 -------
@@ -97,5 +92,3 @@ License
 [1]: http://i61.tinypic.com/281redu.jpg
 [2]: http://i58.tinypic.com/r2tdeo.png
 [3]: http://i60.tinypic.com/1zbutmc.png
-[4]: https://github.com/johnkil
-[5]: https://github.com/johnkil/Android-AppMsg

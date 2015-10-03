@@ -16,23 +16,14 @@
 
 package com.marcohc.toasteroid.sample;
 
-import android.animation.LayoutTransition;
-import android.annotation.TargetApi;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.marcohc.toasteroid.AppMsg;
-import com.marcohc.toasteroid.helper.Toasteroid;
-
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH;
-import static android.os.Build.VERSION_CODES.JELLY_BEAN;
+import com.marcohc.toasteroid.Toasteroid;
 
 /**
  * Sample of Toasteroid library.
@@ -55,15 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 buttonClick(v);
             }
         });
-        if (SDK_INT >= JELLY_BEAN) {
-            enableChangingTransition();
-        }
-    }
-
-    @TargetApi(JELLY_BEAN)
-    private void enableChangingTransition() {
-        ViewGroup animatedRoot = (ViewGroup) findViewById(R.id.animated_root);
-        animatedRoot.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
     }
 
     /**
@@ -77,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 showAppMsg();
                 break;
             case R.id.cancel_all:
-                AppMsg.cancelAll(this);
+                Toasteroid.dismiss();
                 break;
             default:
                 return;
@@ -104,24 +86,11 @@ public class MainActivity extends AppCompatActivity {
                 Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.DELETE);
                 break;
             case 5:
-                Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.INFO, 5000l);
+                Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.INFO, Toasteroid.LENGTH_LONG);
                 break;
             case 6:
-                Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.WARNING, Gravity.TOP);
+                Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.WARNING, Toasteroid.LENGTH_SHORT, Gravity.TOP);
                 break;
-            case 7:
-                Toasteroid.show(this, mStyle.getSelectedItem().toString(), Toasteroid.STYLES.SUCCESS, AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left), AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right));
-                break;
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        // This is optional for 14+,
-        // also you may want to call it at your later convenience, e.g. onDestroy
-        if (SDK_INT < ICE_CREAM_SANDWICH) {
-            AppMsg.cancelAll(this);
         }
     }
 }
