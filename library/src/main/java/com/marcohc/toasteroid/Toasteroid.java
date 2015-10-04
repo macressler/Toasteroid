@@ -17,6 +17,7 @@
 package com.marcohc.toasteroid;
 
 import android.app.Activity;
+import android.graphics.drawable.GradientDrawable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,9 +51,9 @@ public class Toasteroid {
         ImageView toastImage = (ImageView) toastView.findViewById(R.id.toastImage);
         TextView toastMessage = (TextView) toastView.findViewById(R.id.toastMessage);
         ViewGroup toastContainer = (ViewGroup) toastView.findViewById(R.id.toastContainer);
-        int marginBottom = (int) activity.getResources().getDimension(R.dimen.toasteroid_elevation);
+        int marginBottom = (int) activity.getResources().getDimension(R.dimen.padding);
         toastImage.setImageResource(getStyleIcon(style));
-        toastContainer.setBackgroundResource(getStyleBackgroundColor(style));
+        ((GradientDrawable) toastContainer.getBackground()).setColor(activity.getResources().getColor(getStyleBackgroundColor(style)));
         toastMessage.setText(message);
         myToast = new Toast(activity);
         myToast.setDuration(duration);

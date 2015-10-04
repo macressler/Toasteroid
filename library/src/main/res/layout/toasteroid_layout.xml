@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/toastContainer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:alpha="@dimen/toasteroid_alpha_background"
-    android:background="@android:color/black"
-    android:elevation="@dimen/toasteroid_elevation"
-    android:padding="@dimen/toasteroid_padding">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/toastContainer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:alpha="@dimen/toasteroid_alpha_background"
+        android:background="@drawable/rounded_shape"
         android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/small_padding">
 
         <ImageView
             android:id="@+id/toastImage"
@@ -28,10 +26,10 @@
             style="@style/toasteroid_font_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/small_padding"
             android:layout_toRightOf="@+id/image"
             android:text="This is an information text"
             android:textColor="@android:color/white"/>
 
     </LinearLayout>
-
 </RelativeLayout>
