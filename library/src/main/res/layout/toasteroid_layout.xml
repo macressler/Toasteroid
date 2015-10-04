@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:alpha="@dimen/toasteroid_alpha_background"
-        android:background="@drawable/rounded_shape"
+        android:background="@drawable/toasteroid_rounded_shape"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
         android:padding="@dimen/small_padding">
