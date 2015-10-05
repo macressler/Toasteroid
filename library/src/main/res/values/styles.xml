@@ -4,6 +4,6 @@
     <item name="toasteroid_alpha_background" format="float" type="dimen">0.9</item>
 
     <style name="toasteroid_font_size">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
