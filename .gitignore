@@ -8,9 +8,6 @@
 #.classpath
 #.checkstyle
 
-# Files for the idea
-*.idea/*
-
 # Files for the Dalvik VM
 *.dex
 
@@ -26,6 +23,10 @@ gen/
 # Gradle files
 .gradle/
 build/
+/Toasteroid.iml
+/gradlew
+/local.properties
+/gradlew.bat
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -39,6 +40,8 @@ gen
 lint.xml
 
 #IntelliJ IDEA
+# Files for the idea
+.idea/*
 .idea
 *.iml
 *.ipr
