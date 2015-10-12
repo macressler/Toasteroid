@@ -45,6 +45,18 @@ public class Toasteroid {
         show(activity, message, style, duration, DEFAULT_GRAVITY);
     }
 
+    public static void show(Activity activity, int message, STYLES style) {
+        show(activity, message, style, LENGTH_SHORT, DEFAULT_GRAVITY);
+    }
+
+    public static void show(Activity activity, int message, STYLES style, int duration) {
+        show(activity, message, style, duration, DEFAULT_GRAVITY);
+    }
+
+    public static void show(Activity activity, int message, STYLES style, int duration, int gravity) {
+        show(activity, activity.getString(message), style, duration, gravity);
+    }
+
     public static void show(Activity activity, String message, STYLES style, int duration, int gravity) {
 
         View toastView = activity.getLayoutInflater().inflate(R.layout.toasteroid_layout, null);
